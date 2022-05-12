@@ -11,20 +11,28 @@
 let randomNumber = [];
 for (let i = 0; i < 5; i++) {
    let createRandom = (Math.floor(Math.random() * 50) + 1);
-   randomNumber.push(createRandom);
-   alert(createRandom);
+   //2. inserisco i numeri generati nell array
+
+   //3. verifica che i numeri non sono duplicati 
+   if(!randomNumber.includes(createRandom)) {
+    randomNumber.push(createRandom);
 }
+}
+console.log(randomNumber)
 
-
-// Dopo 30 secondi l'utente deve inserire, uno alla volta, i numeri che ha visto precedentemente, tramite il prompt().
+//4. Dopo 30 secondi l'utente deve inserire, uno alla volta, i numeri che ha visto precedentemente, tramite il prompt().
+let numIndovinati;
 setTimeout(function() {
     for (let i = 0; i < 5; i++) {
         let userNumber = Number(prompt("Ricorda e inserisci i numeri apparsi poco prima"));
+        if(userNumber === createRandom){
+            numIndovinati.push(userNumber)
+        }
     }
 }, 3000);
 
 
-// Dopo il software dice quanti e quali dei numeri da indovinare sono stati individuati.
+//5. Dopo il software dice quanti e quali dei numeri da indovinare sono stati individuati.
 let control;
 if (randomNumber === userNumber){
     alert("Hai indovinato il numero!");
