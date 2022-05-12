@@ -24,21 +24,5 @@ setTimeout(function() {
 let control;
 if (randomNumber === userNumber){
     alert("Hai indovinato il numero!")
-} else [
+} else 
     alert("Hai sbaglito numero riprova!")
-]
-
-
-
-
-
-
-// chiedo all utente quanti secondi mancano alla cottura della pasta
-// dopo il tempo indicato ese un alert con "è pronta la pasta alessandro"
-
-//1. chiedo all utente i secondi
-// const second = Number(prompt("quanti secondi mancano?"));
-
-// setTimeout(function(){
-//     alert("la pasta è pronta");
-// }, second * 1000); 
