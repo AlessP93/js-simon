@@ -9,10 +9,10 @@
 
 //1. Visualizzare in pagina 5 numeri casuali creati con un ciclo, mostrando un alert
 let randomNumber = [];
-let createRandom;
 for (let i = 0; i < 5; i++) {
    let createRandom = (Math.floor(Math.random() * 50) + 1);
-   createRandom.push(randomNumber.length);
+   randomNumber.push(createRandom);
+   alert(createRandom);
 }
 
 
@@ -22,6 +22,7 @@ setTimeout(function() {
         let userNumber = Number(prompt("Ricorda e inserisci i numeri apparsi poco prima"));
     }
 }, 3000);
+
 
 // Dopo il software dice quanti e quali dei numeri da indovinare sono stati individuati.
 let control;
