@@ -8,10 +8,13 @@
 
 
 //1. Visualizzare in pagina 5 numeri casuali creati con un ciclo, mostrando un alert
-let randomNumber;
+let randomNumber = [];
+let createRandom;
 for (let i = 0; i < 5; i++) {
-    alert(Math.floor(Math.random() * 50) + 1);
+   let createRandom = (Math.floor(Math.random() * 50) + 1);
+   createRandom.push(randomNumber.length);
 }
+
 
 // Dopo 30 secondi l'utente deve inserire, uno alla volta, i numeri che ha visto precedentemente, tramite il prompt().
 setTimeout(function() {
@@ -23,6 +26,6 @@ setTimeout(function() {
 // Dopo il software dice quanti e quali dei numeri da indovinare sono stati individuati.
 let control;
 if (randomNumber === userNumber){
-    alert("Hai indovinato il numero!")
+    alert("Hai indovinato il numero!");
 } else 
-    alert("Hai sbaglito numero riprova!")
+    alert("Hai sbaglito numero riprova!");
