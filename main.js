@@ -12,29 +12,43 @@ let randomNumber = [];
 for (let i = 0; i < 5; i++) {
    let createRandom = (Math.floor(Math.random() * 50) + 1);
    //2. inserisco i numeri generati nell array
-
+    alert(createRandom)
    //3. verifica che i numeri non sono duplicati 
    if(!randomNumber.includes(createRandom)) {
     randomNumber.push(createRandom);
 }
 }
-console.log(randomNumber)
+
 
 //4. Dopo 30 secondi l'utente deve inserire, uno alla volta, i numeri che ha visto precedentemente, tramite il prompt().
-let numIndovinati;
+let numIndovinati = [];
 setTimeout(function() {
     for (let i = 0; i < 5; i++) {
         let userNumber = Number(prompt("Ricorda e inserisci i numeri apparsi poco prima"));
-        if(userNumber === createRandom){
+        if(randomNumber.includes(userNumber)){
             numIndovinati.push(userNumber)
         }
     }
-}, 3000);
+    //5. Dopo il software dice quanti e quali 
+    const validNumber = []; // numeri indovinati
+    for (let i = 0; i < numIndovinati.length; i++) {
+        cost number = numIndovinati[i];
+        //SE il numero è presentr nell array numIndovinati e NON è incluao nell array validNumbers lo aggingo nel validNumber
+
+}, 3000); 
+
+
+
+
+
+
+
+
 
 
 //5. Dopo il software dice quanti e quali dei numeri da indovinare sono stati individuati.
-let control;
-if (randomNumber === userNumber){
+let userNumber;
+if ( === ){
     alert("Hai indovinato il numero!");
 } else 
     alert("Hai sbaglito numero riprova!");
